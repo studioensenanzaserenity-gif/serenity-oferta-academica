@@ -1,0 +1,615 @@
+---
+title: "Oferta Académica | Serenity Studio & Enseñanza"
+output:
+  html_document:
+    theme: null
+    css: estilos.css
+    toc: false
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(readr)
+library(glue)
+library(dplyr)
+```
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<div class="navbar">
+<a href="#inicio">Inicio</a>
+
+<a href="#diplomado">Diplomado</a>
+
+<a href="#cursos">Cursos</a>
+
+<a href="#talleres">Talleres</a>
+
+<a href="#serenity">¿Por qué Serenity?</a>
+
+<a href="#contacto">Contacto</a>
+
+</div>
+
+<div id="inicio" class="hero">
+
+<img src="Logo serenity.png" class="logo">
+
+<h1>Serenity Studio & Enseñanza</h1>
+
+<h1>En Serenity, creemos en tus capacidades.</h1>
+
+<p>
+Descubre una formación diseñada para desarrollar tus habilidades, fortalecer tu confianza y prepararte para crecer profesionalmente en el área del bienestar, la estética y el masaje.
+</p>
+
+</a>
+
+</div>
+
+<br><br>
+
+<div id="diplomado">
+
+# Diplomado en Terapia Manual
+
+<div class="diplomado-card">
+
+<div class="diplomado-imagen">
+
+<img src="img/terapia_manual.jpg">
+
+</div>
+
+<div class="diplomado-info">
+
+<span class="etiqueta">Diplomado</span>
+
+<h2>Diplomado en Terapia Manual</h2>
+
+<p><strong>⏳ Duración:</strong> 5 meses</p>
+
+<p><strong>💰 Matrícula:</strong> ₡18.000</p>
+
+<p><strong>📅 Mensualidad:</strong> ₡38.000</p>
+
+<p><strong>👕 Incluye:</strong> Uniforme.</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<h3>Aprenderás</h3>
+
+<ul>
+
+<li>Masaje tailandés en camilla y tatami</li>
+
+<li>Shiatsu</li>
+
+<li>Masajes postoperatorios</li>
+
+<li>Lesiones deportivas</li>
+
+<li>Masaje geriátrico</li>
+
+<li>Pacientes encamados</li>
+
+<li>Neurosedante</li>
+
+<li>Masaje estético</li>
+
+<li>Ventosaterapia</li>
+
+<li>Reflexología avanzada</li>
+
+<li>Globos fríos</li>
+
+<li>Parafina reductiva y terapéutica</li>
+
+<li>Elaboración de casos clínicos</li>
+
+</ul>
+
+<a class="boton"
+
+href="https://wa.link/pakhml"
+
+target="_blank">
+
+Solicitar información
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div id="talleres">
+
+# Talleres
+
+
+<div class="contenedor-cursos">
+
+```{r cursos, results='asis'}
+
+cursos <- read_csv("cursos.csv")
+
+for(i in 1:nrow(cursos)){
+
+cat(glue('
+
+<div class="curso">
+
+<img src="img/{cursos$imagen[i]}">
+
+<div class="curso-info">
+
+<p class="etiqueta">{cursos$categoria[i]}</p>
+
+<h2>{cursos$nombre[i]}</h2>
+
+<p><strong>⏳ Duración:</strong> {cursos$duracion[i]}</p>
+
+<p><strong>💰 Inversión:</strong> {cursos$precio[i]}</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<details class="detalles">
+
+<summary>Ver más información</summary>
+
+<br>
+
+<p><strong>Incluye:</strong><br>{cursos$incluye[i]}</p>
+
+<p><strong>Materiales:</strong><br>{cursos$materiales[i]}</p>
+
+<p><strong>Requisitos:</strong><br>{cursos$requisitos[i]}</p>
+
+<br>
+
+<a class="boton"
+
+href="https://wa.link/pakhml"
+
+target="_blank">
+
+Solicitar información
+
+</a>
+
+</details>
+
+</div>
+
+</div>
+
+'))
+
+}
+
+```
+
+</div>
+
+</div>
+
+<br><br>
+
+<div id="cursos">
+
+# Cursos
+
+<div class="masaje-card">
+
+<img src="img/masaje_profesional.jpg" class="masaje-banner">
+
+<div class="modulos">
+<div class="modulo">
+
+<h2>🌿 Módulo Relajante y Spa</h2>
+
+<p><strong>Duración:</strong> 4 meses</p>
+
+<p><strong>Matrícula:</strong> ₡18.000</p>
+
+<p><strong>Mensualidad:</strong> ₡38.000</p>
+
+<p><strong>Incluye:</strong> Uniforme.</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<h3>Aprenderás</h3>
+
+<ul>
+
+<li>Masaje reductivo</li>
+
+<li>Chocolate</li>
+
+<li>Lomi Lomi (Hawaiano)</li>
+
+<li>Facial (rostro)</li>
+
+<li>Ruso con miel</li>
+
+<li>Pindas aromáticas</li>
+
+<li>Piedras calientes</li>
+
+<li>Bambú</li>
+
+<li>Arcilla</li>
+
+<li>Aromaterapia</li>
+
+<li>Pedicure y Manicure Spa</li>
+
+<li>Exfoliación corporal</li>
+
+<li>Envolturas corporales</li>
+
+</ul>
+
+</div>
+
+<div class="modulo">
+
+<h2>💙 Módulo Terapéutico</h2>
+
+<p><strong>Duración:</strong> 4 meses</p>
+
+<p><strong>Matrícula:</strong> ₡18.000</p>
+
+<p><strong>Mensualidad:</strong> ₡38.000</p>
+
+<p><strong>Incluye:</strong> Uniforme.</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<h3>Aprenderás</h3>
+
+<ul>
+
+<li>Masaje relajante</li>
+
+<li>Descontracturante</li>
+
+<li>Drenaje linfático</li>
+
+<li>Reflexología</li>
+
+<li>Embarazadas</li>
+
+<li>Infantil</li>
+
+<li>Esferas chinas</li>
+
+<li>Parálisis facial</li>
+
+<li>Criomasaje</li>
+
+<li>Deportivo</li>
+
+<li>Liberación miofascial</li>
+
+<li>Nervio ciático</li>
+
+<li>Masaje en silla</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:35px;">
+
+<a class="boton"
+
+href="https://wa.link/pakhml"
+
+target="_blank">
+
+Solicitar información del Curso
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="curso-ingles">
+
+<img src="img/ingles_masajistas.jpg" class="masaje-banner">
+
+<div class="curso-ingles-header">
+
+<span class="etiqueta">Curso</span>
+
+<h2>Curso de Inglés para Masajistas</h2>
+
+<div class="modulos">
+
+<div class="modulo">
+
+<h2>Módulo 1<br>Introducción al Inglés</h2>
+
+<p><strong>Duración:</strong> 4 meses</p>
+
+<p><strong>Matrícula:</strong> ₡18.000</p>
+
+<p><strong>Mensualidad:</strong> ₡38.000</p>
+
+<p><strong>Incluye:</strong> Uniforme.</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<h3>Temas</h3>
+
+<ul>
+
+<li>Presentación personal.</li>
+
+<li>Números y precios.</li>
+
+<li>Meses y fechas.</li>
+
+<li>Artículos (A, An y The).</li>
+
+</ul>
+
+</div>
+
+<div class="modulo">
+
+<h2>Módulo 2<br>Énfasis en Masajes y SPA</h2>
+
+<p><strong>Duración:</strong> 4 meses</p>
+
+<p><strong>Matrícula:</strong> ₡18.000</p>
+
+<p><strong>Mensualidad:</strong> ₡38.000</p>
+
+<p><strong>Incluye:</strong> Uniforme.</p>
+
+<div class="certificado">
+
+🏅 Certificado avalado por FECOPROBE
+
+</div>
+
+<h3>Temas</h3>
+
+<ul>
+
+<li>Vocabulario para masajistas.</li>
+
+<li>Músculos y huesos.</li>
+
+<li>Bebidas de SPA.</li>
+
+<li>Historial clínico.</li>
+
+<li>Atención al cliente.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:35px;">
+
+<a class="boton"
+
+href="https://wa.link/pakhml"
+
+target="_blank">
+
+Solicitar información del Curso
+
+</a>
+
+</div>
+
+</div> 
+
+
+<div id="serenity">
+
+# ¿Por qué estudiar con Serenity?
+
+</p>
+
+<div class="beneficios">
+
+<div class="beneficio">
+
+
+<h3>Modalidad Presencial y Virtual</h3>
+
+<p>
+
+Elige la modalidad que mejor se adapte a tus necesidades y disponibilidad.
+
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>Instalaciones Equipadas</h3>
+
+<p>
+
+Contamos con camillas, equipos e insumos adecuados para el aprendizaje práctico.
+
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>Certificación</h3>
+
+<p>
+
+Todos nuestros cursos y el diplomado incluyen certificado avalado por FECOPROBE.
+
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>Enfoque Profesional</h3>
+
+<p>
+
+Nuestros programas están orientados al emprendimiento, la empleabilidad y el crecimiento profesional.
+
+</p>
+
+</div>
+
+<div class="beneficio">
+
+<h3>Docencia Especializada</h3>
+
+<p>
+
+Aprende con la Lic. Diana Araya Moya, propietaria y docente de Serenity Studio & Enseñanza.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div id="contacto" class="footer">
+
+# Contáctanos
+
+<div class="contacto-grid">
+
+<div class="contacto-card">
+
+<h3>📲 WhatsApp</h3>
+
+<p>6171-1832</p>
+
+<a href="https://wa.link/pakhml" target="_blank">
+
+Escribir ahora
+
+</a>
+
+</div>
+
+<div class="contacto-card">
+
+<h3>📧 Correo</h3>
+
+<p>
+
+studioensenanzaserenity@gmail.com
+
+</p>
+
+</div>
+
+<div class="contacto-card">
+
+<h3>📸 Instagram</h3>
+
+<p>
+
+@serenity_studio_ensenanza
+
+</p>
+
+</div>
+
+<div class="contacto-card">
+
+<h3>Dirección Académica</h3>
+
+<p>
+
+Lic. Diana Araya Moya
+
+</p>
+
+<p>
+
+Propietaria y docente
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>
+
+En Serenity, creemos en tus capacidades.
+
+</h2>
+
+<p class="frase-final">
+
+Formando profesionales con pasión, compromiso y excelencia.
+
+</p>
+
+<p class="copyright">
+
+© Serenity Studio & Enseñanza
+
+</p>
+
+</div>
