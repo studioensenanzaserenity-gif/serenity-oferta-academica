@@ -1,727 +1,235 @@
 /* =======================================
-  SERENITY STUDIO & ENSEÑANZA
-Estilos principales
+   SERENITY STUDIO & ENSEÑANZA
+   Estilos principales
 ======================================= */
-  
-  *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-  }
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 html{
   scroll-behavior:smooth;
 }
 
 body{
-  
   font-family:'Poppins', sans-serif;
-  
-  background:#f7fbfc;
-    
-    color:#333;
-    
+  background:#f7fcfc;
+  color:#333;
+  margin:0;
+  padding:0;
+}
+
+/*==========================================
+  AJUSTE RMARKDOWN
+==========================================*/
+
+.main-container{
+  max-width:none !important;
+  width:100% !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Textos justificados */
+p,
+li{
+  text-align:justify;
+}
+
+/* Títulos centrados */
+h1,
+h2,
+h3,
+h4{
+  text-align:center;
 }
 
 /*======================
-  MENÚ
+  TÍTULO SUPERIOR + MENÚ
 =======================*/
-  
-  .navbar{
 
-position:sticky;
+#header{
+  width:100%;
+  background:#f7fcfc;
+  padding:0;
+  margin:0;
+}
 
-top:0;
+#header h1.title,
+h1.title,
+.title{
+  display:block !important;
+  text-align:left !important;
+  font-size:28px !important;
+  font-weight:700 !important;
+  color:#2b2b2b !important;
+  line-height:1.15 !important;
+  margin:0 !important;
+  padding:14px 0 10px 0 !important;
+  background:#f7fcfc !important;
+  letter-spacing:.1px !important;
+  text-shadow:none !important;
+}
 
-z-index:999;
-
-display:flex;
-
-justify-content:center;
-
-gap:35px;
-
-padding:18px;
-
-background:white;
-
-box-shadow:0 4px 15px rgba(0,0,0,.08);
-
+/* MENÚ CENTRADO Y SEPARADO */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:52px;
+  padding:24px 30px;
+  background:white;
+  box-shadow:0 4px 18px rgba(13,142,144,.10);
 }
 
 .navbar a{
-
-text-decoration:none;
-
-color:#0d8e90;
-
-font-weight:600;
-
-transition:.3s;
-
+  display:inline-block;
+  text-decoration:none;
+  color:#0d8e90;
+  font-size:18px;
+  font-weight:700;
+  transition:.3s ease;
+  white-space:nowrap;
+  padding:6px 0;
 }
 
 .navbar a:hover{
-
-color:#17c3c8;
-
+  color:#17c3c8;
+  transform:translateY(-2px);
 }
 
-
 /*==========================================
-                HERO
+  HERO
 ==========================================*/
 
 .hero{
-
-padding:90px 20px;
-
-text-align:center;
-
-background:linear-gradient(135deg,#eafdfd,#ffffff);
-
-border-radius:0 0 35px 35px;
-
-margin-bottom:40px;
-
+  padding:90px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#eafdfd,#ffffff);
+  border-radius:0 0 35px 35px;
+  margin-bottom:40px;
 }
 
 .logo{
-
-width:180px;
-
-margin-bottom:20px;
-
+  width:180px;
+  margin-bottom:20px;
 }
 
 .hero h1{
-
-font-size:48px;
-
-color:#0d8e90;
-
-margin-bottom:10px;
-
+  font-size:48px;
+  color:#0d8e90;
+  margin-bottom:10px;
+  text-shadow:0 7px 18px rgba(13,142,144,.16);
 }
 
 .hero h3{
-
-font-weight:500;
-
-color:#555;
-
-margin-bottom:25px;
-
+  font-weight:500;
+  color:#555;
+  margin-bottom:25px;
 }
 
 .hero p{
-
-max-width:800px;
-
-margin:auto;
-
-font-size:18px;
-
-line-height:1.8;
-
-margin-bottom:35px;
-
-color:#555;
-
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:35px;
+  color:#555;
+  text-align:center;
 }
-
 
 /*======================
   BOTÓN
 =======================*/
-  
- .boton{
 
-display:inline-flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:14px 26px;
-
-background:#17c3c8;
-
-color:white;
-
-font-weight:600;
-
-text-decoration:none;
-
-border-radius:12px;
-
-transition:.3s;
-
-box-shadow:0 6px 18px rgba(23,195,200,.18);
-
-margin-top:20px;
-
+.boton{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:14px 26px;
+  background:#17c3c8;
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:12px;
+  transition:.3s;
+  box-shadow:0 6px 18px rgba(23,195,200,.18);
+  margin-top:20px;
 }
 
 .boton:hover{
-
-background:#0d8e90;
-
-transform:translateY(-2px);
-
+  background:#0d8e90;
+  transform:translateY(-2px);
+  color:white;
+  text-decoration:none;
 }
 
 /*======================
-  TITULOS
+  TÍTULOS
 =======================*/
-  
-  h1,h2,h3{
-    
-    font-weight:600;
-    
-  }
 
-#oferta{
-
-width:92%;
-
-margin:auto;
-
-padding:60px 0;
-
+h1,h2,h3{
+  font-weight:600;
 }
 
-#oferta h1{
-
-text-align:center;
-
-color:#0d8e90;
-  
-  margin-bottom:15px;
-
-}
-
-.subtitulo{
-  
-  text-align:center;
-  
-  color:#666;
-    
-    margin-bottom:45px;
-  
-}
-
-/*======================
-  TARJETAS DE CURSOS
-=======================*/
-  
-  .contenedor-cursos{
-    
-    display:grid;
-    
-    grid-template-columns:
-      repeat(auto-fit,minmax(320px,1fr));
-    
-    gap:35px;
-    
-  }
-
-.curso{
-
-background:white;
-
-border-radius:20px;
-
-overflow:hidden;
-
-display:flex;
-
-flex-direction:column;
-
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-
-transition:.35s;
-
-height:100%;
-
-}
-
-.curso:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 18px 40px rgba(0,0,0,.10);
-
-}
-
-.curso img{
-
-width:100%;
-
-height:260px;
-
-object-fit:cover;
-
-display:block;
-
-}
-
-.curso-info{
-
-padding:28px;
-
-display:flex;
-
-flex-direction:column;
-
-flex:1;
-
-}
-
-.detalles{
-
-margin-top:auto;
-
-padding-top:20px;
-
-border-top:1px solid #ececec;
-
-}
-
-/*======================
-  BENEFICIOS
-=======================*/
-  
-  .beneficios{
-    
-    width:90%;
-    
-    margin:auto;
-    
-    display:grid;
-    
-    grid-template-columns:
-      repeat(auto-fit,minmax(250px,1fr));
-    
-    gap:30px;
-    
-    padding-bottom:60px;
-    
-  }
-
-.beneficio{
-  
-  background:white;
-  
-  border-radius:18px;
-  
-  padding:35px;
-  
-  text-align:center;
-  
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-  
-}
-
-.beneficio h3{
-  
-  color:#099598;
-    
-    margin-bottom:15px;
-  
-}
-
-/*======================
-  FOOTER
-=======================*/
-  
-  .footer{
-    
-    background:#0d8e90;
-      
-      color:white;
-    
-    text-align:center;
-    
-    padding:60px 20px;
-    
-  }
-
-.logo-footer{
-  
-  width:110px;
-  
-  margin-bottom:20px;
-  
-}
-
-.footer p{
-  
-  margin:20px 0;
-  
-}
-
-/*======================
-  RESPONSIVE
-=======================*/
-  
-  @media(max-width:900px){
-    
-    .hero h1{
-      
-      font-size:34px;
-      
-    }
-    
-    .hero p{
-      
-      width:90%;
-      
-    }
-    
-    .navbar{
-      
-      gap:15px;
-      
-      font-size:14px;
-      
-    }
-    
-  }
-  .etiqueta{
-
-    display:inline-block;
-
-    background:#17c3c8;
-
-    color:white;
-
-    padding:6px 14px;
-
-    border-radius:20px;
-
-    font-size:13px;
-
-    font-weight:600;
-
-    margin-bottom:15px;
-
-}
-
-/*==========================================
-            DIPLOMADO
-==========================================*/
-
-#diplomado{
-
-width:92%;
-
-margin:auto;
-
-padding:40px 0;
-
-}
-
-.diplomado-card{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 8px 30px rgba(0,0,0,.08);
-
-align-items:center;
-
-}
-
-.diplomado-imagen img{
-
-width:100%;
-
-border-radius:18px;
-
-}
-
-.diplomado-info h2{
-
-color:#0d8e90;
-
-margin:15px 0;
-
-}
-
-.diplomado-info ul{
-
-margin-top:20px;
-
-padding-left:22px;
-
-line-height:1.9;
-
-}
-
-.certificado{
-
-margin:20px 0;
-
-background:#e8ffff;
-
-padding:15px;
-
-border-left:5px solid #17c3c8;
-
-font-weight:600;
-
-color:#0d8e90;
-
-border-radius:10px;
-
-}
-
-/*==========================================
-      CURSO MASAJE PROFESIONAL
-==========================================*/
-
-#masaje{
-
-width:92%;
-
-margin:auto;
-
-padding:40px 0;
-
-}
-
-.masaje-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:20px;
-
-box-shadow:0 8px 30px rgba(0,0,0,.08);
-
-}
-
-.masaje-banner{
-
-width:100%;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-margin-bottom:35px;
-
-}
-
-.modulos{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-
-gap:35px;
-
-}
-
-.modulo{
-
-background:#f8ffff;
-
-padding:25px;
-
-border-radius:18px;
-
-border-top:6px solid #17c3c8;
-
-}
-
-.modulo h2{
-
-color:#0d8e90;
-
-margin-bottom:18px;
-
-}
-
-.modulo ul{
-
-padding-left:20px;
-
-line-height:1.9;
-
-margin-top:15px;
-
-}
-
-/*==========================================
-               TALLERES
-==========================================*/
-
-#talleres{
-
-width:92%;
-
-margin:auto;
-
-padding:40px 0;
-
-}
-
-.contenedor-talleres{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-margin-top:30px;
-
-}
-
-.taller{
-
-background:white;
-
-padding:30px;
-
-border-radius:18px;
-
-text-align:center;
-
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.taller:hover{
-
-transform:translateY(-6px);
-
-}
-
-.taller h3{
-
-color:#0d8e90;
-
-margin-bottom:15px;
-
-}
-
-.taller p{
-
-color:#666;
-
-}
-
-.mensaje-taller{
-
-margin-top:45px;
-
-padding:35px;
-
-background:#e9ffff;
-
-border-radius:20px;
-
-text-align:center;
-
-border-left:6px solid #17c3c8;
-
-}
-
-.mensaje-taller h3{
-
-color:#0d8e90;
-
-margin-bottom:15px;
-
-}
-
-
-.curso,
-.beneficio,
-.taller,
-.contacto-card,
-.modulo,
-.diplomado-card{
-
-transition:.35s;
-
-}
-
-.curso:hover,
-.beneficio:hover,
-.taller:hover,
-.contacto-card:hover,
-.modulo:hover,
-.diplomado-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:#f7fcfc;
-
-margin:0;
-
-padding:0;
-
-color:#333;
-
-}
 #diplomado h1,
 #cursos h1,
 #masaje h1,
 #talleres h1,
 #serenity h1,
-#contacto h1{
-
-font-size:42px;
-
-font-weight:700;
-
-color:#0d8e90;
-
-margin-bottom:20px;
-
-text-align:center;
-
-letter-spacing:.5px;
-
+#contacto h1,
+#oferta h1{
+  font-size:42px;
+  font-weight:700;
+  color:#0d8e90;
+  margin-bottom:20px;
+  text-align:center;
+  letter-spacing:.5px;
+  text-shadow:0 8px 20px rgba(13,142,144,.16);
 }
+
+#diplomado h1::after,
+#cursos h1::after,
+#masaje h1::after,
+#talleres h1::after,
+#serenity h1::after,
+#contacto h1::after,
+#oferta h1::after{
+  content:"";
+  display:block;
+  width:90px;
+  height:3px;
+  background:linear-gradient(90deg,transparent,#17c3c8,transparent);
+  margin:18px auto 0;
+  border-radius:999px;
+}
+
+/*======================
+  SECCIONES
+=======================*/
+
+#oferta,
 #diplomado,
 #cursos,
 #masaje,
 #talleres,
-#serenity,
-#contacto{
-
-padding-top:80px;
-
-padding-bottom:80px;
-
+#serenity{
+  width:92%;
+  margin:auto;
+  padding-top:80px;
+  padding-bottom:80px;
 }
+
 section,
 #diplomado,
 #cursos,
@@ -729,83 +237,660 @@ section,
 #talleres,
 #serenity,
 #contacto{
-
-animation:fadeUp .8s ease;
-
+  animation:fadeUp .8s ease;
 }
 
 @keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
 
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
-to{
+/*======================
+  ETIQUETAS
+=======================*/
 
-opacity:1;
-
-transform:translateY(0);
-
+.etiqueta{
+  display:inline-block;
+  background:#17c3c8;
+  color:white;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:15px;
 }
 
+/*======================
+  TARJETAS DE CURSOS
+=======================*/
+
+.contenedor-cursos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
 }
+
+.curso{
+  background:white;
+  border-radius:22px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 8px 25px rgba(13,142,144,.08);
+  transition:.35s;
+  height:100%;
+  border:1px solid rgba(13,142,144,.08);
+}
+
+.curso:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(13,142,144,.13);
+}
+
+.curso img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+
+.curso-info{
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.curso-info h2,
+.curso-info h3{
+  color:#0d8e90;
+  margin-bottom:12px;
+  text-align:center;
+}
+
+.curso-info p{
+  color:#555;
+  line-height:1.7;
+}
+
+/*==========================================
+  DIPLOMADO
+==========================================*/
+
+.diplomado-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  background:white;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 8px 30px rgba(13,142,144,.08);
+  align-items:center;
+  border:1px solid rgba(13,142,144,.08);
+}
+
+.diplomado-imagen img{
+  width:100%;
+  border-radius:18px;
+}
+
+.diplomado-info h2{
+  color:#0d8e90;
+  margin:15px 0;
+  text-shadow:0 6px 16px rgba(13,142,144,.12);
+}
+
+.diplomado-info ul{
+  margin-top:20px;
+  padding-left:22px;
+  line-height:1.9;
+}
+
+.certificado{
+  margin:20px 0;
+  background:#e8ffff;
+  padding:15px;
+  border-left:5px solid #17c3c8;
+  font-weight:600;
+  color:#0d8e90;
+  border-radius:10px;
+  text-align:center;
+}
+
+/*==========================================
+  CURSO MASAJE PROFESIONAL
+==========================================*/
+
+.masaje-card{
+  background:white;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 8px 30px rgba(13,142,144,.08);
+  border:1px solid rgba(13,142,144,.08);
+}
+
+.masaje-banner{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:35px;
+}
+
+.modulos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:35px;
+}
+
+.modulo{
+  background:#f8ffff;
+  padding:25px;
+  border-radius:18px;
+  border-top:6px solid #17c3c8;
+  box-shadow:0 6px 20px rgba(13,142,144,.07);
+}
+
+.modulo h2{
+  color:#0d8e90;
+  margin-bottom:18px;
+  text-shadow:0 5px 14px rgba(13,142,144,.12);
+}
+
+.modulo h3{
+  color:#0d8e90;
+  margin-top:20px;
+  margin-bottom:12px;
+}
+
+.modulo ul{
+  padding-left:20px;
+  line-height:1.9;
+  margin-top:15px;
+}
+
+/*==========================================
+  CURSO INGLÉS
+==========================================*/
 
 .curso-ingles{
-
-margin-top:60px;
-
-background:white;
-
-padding:40px;
-
-border-radius:20px;
-
-box-shadow:0 8px 30px rgba(0,0,0,.08);
-
+  margin-top:60px;
+  background:white;
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 8px 30px rgba(13,142,144,.08);
+  border:1px solid rgba(13,142,144,.08);
 }
 
 .curso-ingles img{
-
-width:100%;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-margin-bottom:30px;
-
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:30px;
 }
 
-.curso-ingles-info h2{
-
-color:#0d8e90;
-
-margin-top:15px;
-
-margin-bottom:10px;
-
+.curso-ingles-header h2{
+  color:#0d8e90;
+  margin-top:15px;
+  margin-bottom:10px;
+  text-shadow:0 5px 14px rgba(13,142,144,.12);
 }
 
-.curso-ingles-info h3{
-
-color:#17aeb5;
-
-margin-bottom:20px;
-
+.curso-ingles-header h3{
+  color:#17aeb5;
+  margin-bottom:20px;
 }
 
-.curso-ingles-info ul{
+.curso-ingles-header ul{
+  margin-top:20px;
+  padding-left:22px;
+  line-height:1.9;
+}
 
-margin-top:20px;
+/*==========================================
+  TALLERES - MÁS INFORMACIÓN PREMIUM
+==========================================*/
 
-padding-left:22px;
+.taller-card .curso-info h2{
+  color:#0d8e90;
+  text-shadow:0 7px 18px rgba(13,142,144,.15);
+  margin-bottom:18px;
+}
 
-line-height:1.9;
+.detalles{
+  margin-top:20px;
+  border-radius:18px;
+  border:1.5px solid rgba(13,142,144,.22);
+  background:#ffffff;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(13,142,144,.055);
+}
 
+.detalles summary{
+  list-style:none;
+  cursor:pointer;
+  padding:16px 18px;
+  font-family:'Poppins',sans-serif;
+  font-size:12px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#0d8e90;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#f8ffff;
+}
+
+.detalles summary::-webkit-details-marker{
+  display:none;
+}
+
+.detalles summary::after{
+  content:"+";
+  font-size:22px;
+  font-weight:400;
+  color:#0d8e90;
+  transition:.3s ease;
+}
+
+.detalles[open] summary::after{
+  content:"−";
+}
+
+.detalle-contenido{
+  padding:18px;
+  display:grid;
+  gap:14px;
+  text-align:left;
+}
+
+.detalle-bloque{
+  padding:16px;
+  border-radius:15px;
+  background:#f7fcfc;
+  border:1px solid rgba(13,142,144,.14);
+}
+
+.detalle-bloque h4{
+  margin:0 0 8px;
+  font-family:'Poppins',sans-serif;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#0d8e90;
+  text-align:left;
+}
+
+.detalle-bloque p{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  font-size:13.5px;
+  line-height:1.75;
+  color:#4f5b5b;
+  text-align:justify;
+}
+
+.boton-detalle{
+  width:100%;
+  margin-top:4px;
+  text-align:center;
+}
+
+/*==========================================
+  BENEFICIOS
+==========================================*/
+
+.beneficios{
+  width:90%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  padding-bottom:60px;
+}
+
+.beneficio{
+  background:white;
+  border-radius:20px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(13,142,144,.08);
+  border:1px solid rgba(13,142,144,.08);
+  transition:.35s;
+}
+
+.beneficio h3{
+  color:#099598;
+  margin-bottom:15px;
+  text-shadow:0 6px 15px rgba(13,142,144,.12);
+  text-align:center;
+}
+
+.beneficio p{
+  text-align:justify;
+  line-height:1.75;
+}
+
+/*======================
+  HOVERS GENERALES
+=======================*/
+
+.curso,
+.beneficio,
+.taller,
+.contacto-card,
+.modulo,
+.diplomado-card,
+.masaje-card,
+.curso-ingles{
+  transition:.35s;
+}
+
+.curso:hover,
+.beneficio:hover,
+.taller:hover,
+.contacto-card:hover,
+.modulo:hover,
+.diplomado-card:hover,
+.masaje-card:hover,
+.curso-ingles:hover{
+  transform:translateY(-7px);
+  box-shadow:0 15px 35px rgba(13,142,144,.13);
+}
+
+/*======================
+  FOOTER / CONTACTO
+=======================*/
+
+.footer{
+  width:100%;
+  background:
+    linear-gradient(135deg,#075f61 0%,#0d8e90 48%,#17aeb5 100%);
+  color:white;
+  text-align:center;
+  padding:75px 24px 55px;
+  border-radius:36px 36px 0 0;
+  margin-top:60px;
+}
+
+.footer h1{
+  color:white !important;
+  text-shadow:0 8px 22px rgba(0,0,0,.20) !important;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.footer h1::after{
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent) !important;
+}
+
+.contacto-grid{
+  width:min(1050px,100%);
+  margin:42px auto 45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.contacto-card{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:22px;
+  padding:28px 20px;
+  backdrop-filter:blur(8px);
+  box-shadow:0 14px 32px rgba(0,0,0,.12);
+  transition:.35s ease;
+  text-align:center;
+}
+
+.contacto-card:hover{
+  transform:translateY(-6px);
+  background:rgba(255,255,255,.18);
+  box-shadow:0 18px 42px rgba(0,0,0,.18);
+}
+
+.contacto-card h3{
+  color:white;
+  font-size:18px;
+  margin-bottom:14px;
+  text-shadow:0 5px 14px rgba(0,0,0,.18);
+  text-align:center;
+}
+
+.contacto-card p{
+  color:rgba(255,255,255,.92);
+  font-size:14px;
+  line-height:1.7;
+  margin:8px 0;
+  text-align:center;
+}
+
+.contacto-card a{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:12px;
+  padding:11px 18px;
+  border-radius:999px;
+  background:white;
+  color:#0d8e90 !important;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.contacto-card a:hover{
+  background:#e8ffff;
+  transform:translateY(-2px);
+}
+
+.footer hr{
+  width:min(850px,90%);
+  margin:40px auto 32px;
+  border:none;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+}
+
+.footer h2{
+  color:white;
+  font-size:28px;
+  font-weight:600;
+  margin-bottom:14px;
+  text-shadow:0 8px 20px rgba(0,0,0,.18);
+  text-align:center;
+}
+
+.frase-final{
+  font-size:16px;
+  color:rgba(255,255,255,.90);
+  margin-bottom:28px;
+  text-align:center;
+}
+
+.copyright{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  text-align:center;
+}
+
+/*======================
+  RESPONSIVE
+=======================*/
+
+@media(max-width:1100px){
+
+  .navbar{
+    justify-content:flex-start;
+    gap:34px;
+    overflow-x:auto;
+    padding:22px 28px;
+  }
+
+  .navbar a{
+    font-size:17px;
+  }
+}
+
+@media(max-width:900px){
+
+  #header h1.title,
+  h1.title,
+  .title{
+    font-size:24px !important;
+    padding:13px 0 9px 0 !important;
+  }
+
+  .hero{
+    padding:70px 20px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    width:90%;
+    font-size:16px;
+  }
+
+  #diplomado h1,
+  #cursos h1,
+  #masaje h1,
+  #talleres h1,
+  #serenity h1,
+  #contacto h1,
+  #oferta h1{
+    font-size:32px;
+  }
+
+  .diplomado-card{
+    grid-template-columns:1fr;
+  }
+
+  .masaje-banner,
+  .curso-ingles img{
+    height:280px;
+  }
+
+  .modulos{
+    grid-template-columns:1fr;
+  }
+
+  .contacto-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+
+  #header h1.title,
+  h1.title,
+  .title{
+    font-size:21px !important;
+    padding:12px 0 8px 0 !important;
+  }
+
+  .navbar{
+    justify-content:flex-start;
+    gap:28px;
+    overflow-x:auto;
+    padding:18px 20px;
+  }
+
+  .navbar a{
+    font-size:16px;
+  }
+
+  #oferta,
+  #diplomado,
+  #cursos,
+  #masaje,
+  #talleres,
+  #serenity{
+    width:92%;
+    padding-top:55px;
+    padding-bottom:55px;
+  }
+
+  .hero{
+    padding:60px 18px;
+  }
+
+  .logo{
+    width:145px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero h3{
+    font-size:17px;
+  }
+
+  .hero p{
+    width:100%;
+    font-size:15px;
+    text-align:center;
+  }
+
+  .contenedor-cursos,
+  .contenedor-talleres{
+    grid-template-columns:1fr;
+  }
+
+  .curso-info,
+  .taller,
+  .masaje-card,
+  .curso-ingles,
+  .diplomado-card{
+    padding:24px;
+  }
+
+  .curso img{
+    height:230px;
+  }
+
+  .masaje-banner,
+  .curso-ingles img{
+    height:230px;
+  }
+
+  .detalle-contenido{
+    padding:15px;
+  }
+
+  .detalle-bloque{
+    padding:14px;
+  }
+
+  .detalle-bloque p{
+    font-size:13px;
+  }
+
+  .contacto-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .footer{
+    padding:60px 20px 45px;
+    border-radius:28px 28px 0 0;
+  }
+
+  .footer h2{
+    font-size:23px;
+  }
 }
